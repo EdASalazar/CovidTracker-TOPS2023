@@ -119,6 +119,9 @@ export default function ReqQuestion2({ demoPage, setDemoPage }) {
           </div>
       </div>
       </div>
+      <p onClick={() => setDemoPage(demoPage - 1)} style={{ cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline' }}>
+        Go back
+      </p>
     </>
   );
 }

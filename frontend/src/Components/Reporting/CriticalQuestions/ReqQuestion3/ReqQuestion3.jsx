@@ -134,6 +134,9 @@ export default function ReqQuestion3({ demoPage, setDemoPage }) {
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
       </div>
+      <p onClick={() => setDemoPage(demoPage - 1)} style={{ cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline' }}>
+        Go back
+      </p>
     </>
   );
 }

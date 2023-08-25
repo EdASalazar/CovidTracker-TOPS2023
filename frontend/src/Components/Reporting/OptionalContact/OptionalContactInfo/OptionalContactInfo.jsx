@@ -42,6 +42,9 @@ export default function OptionalContactInfo({ demoPage, setDemoPage }) {
           Skip & Submit
         </span>
       </div>
+      <p onClick={() => setDemoPage(demoPage - 1)} style={{ cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline' }}>
+        Go back
+      </p>
     </div>
   );
 }

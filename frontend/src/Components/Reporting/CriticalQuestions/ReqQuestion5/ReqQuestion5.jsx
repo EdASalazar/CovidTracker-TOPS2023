@@ -96,6 +96,9 @@ can uncheck this box the next time you report a result. You will lose access to 
         <span className="requiredQuestionAsterisk2">* </span>
         <span className="requiredQuestionText2">Required question</span>
       </div>
+      <p onClick={() => setDemoPage(demoPage - 1)} style={{ cursor: 'pointer', fontSize: '20px', color: '#00426b', textDecoration: 'underline' }}>
+        Go back
+      </p>
     </>
   );
 }
