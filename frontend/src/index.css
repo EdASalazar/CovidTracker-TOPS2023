@@ -11,3 +11,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+h1 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h2 {
+  color: #00426b;
+  text-align: center;
+  font-family: Bitter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h3 {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+p {
+  color: #00426b;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.blueButton {
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  background: #0058b7;
+  width: 230px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.blueButton:hover {
+  cursor: pointer;
+}
+
+.dissolveEffect {
+  opacity: 1;
+  transition: opacity 100ms ease-out;
+}
+
+.dissolveEffect:active {
+  opacity: 0;
+}

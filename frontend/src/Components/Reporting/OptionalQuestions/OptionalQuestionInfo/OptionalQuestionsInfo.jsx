@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import backArrow from "../../../../Images/Button - Back to Step 2.png";
-import { Button } from "react-bootstrap";
 import "../../OptionalQuestions/OptionalQuestions.css";
 import { FormContext } from "../../../../Context/FormContext";
 
@@ -61,14 +60,9 @@ export default function OptionalQuestionsInfo({ demoPage, setDemoPage }) {
 
       </div>
       <div className="nextButtonDiv">
-        <Button
-          id="optionalQuestionsNextButton"
-          style={{ marginTop: "3rem", border: "3px solid #8A8A8A" }}
-          type="Next"
-          onClick={() => setDemoPage(demoPage + 1)}
-        >
-          Next
-        </Button>
+        <button className="blueButton" id="optionalQuestionsNextButton" onClick={() => setDemoPage(demoPage + 1)}>Next
+        </button>
+
       </div>
       <div className="skipSubmit" style={{ display: "block", marginBottom: "13rem" }}>
         <span

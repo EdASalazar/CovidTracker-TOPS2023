@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Noto+Sans:wght@400;600&display=swap");
+
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+/* Media query for smaller screens (mobile) */
+
+@media screen and (max-width: 800px) {
+
+  .home-page {
+    height: 100vh;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    margin-top: 7rem;
+  }
+
+  .home-h1 {
+    font-size: 2.8rem!important;
+  }
+  .home-text p {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+  .home-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 20px;
+  }
+  
+  .responsive-image {
+    width: 100%;
+    max-height: 25vh;
+    object-fit: contain;
+    margin-top: 10rem;
+  }
+  
+  .home-p2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homeSection {
+    max-width: 60%;
+    margin-right: 2rem;
+  }
+
+}
+
+/*home-landing-reporting*/
+.home-page {
+  display: flex;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+/* style={{ height: '40rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }} */
+
+.responsive-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 520px;
+  height: 347px;
+}
+/* style={{ color: '#00426b', fontSize: 18, padding: 20 }} */
+.home-paragraph {
+  color: #00426B;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.homeSection {
+  max-width: 100%;
+  height: auto;
+  margin: .05rem 1rem 2rem 0 ;
+  
+}
+
+.home-text {
+  text-align: center;
+  padding: 1rem;
+  font-size: 64px;
+}
+
+.home-h1 {
+  margin: 4rem 4rem 2rem 4rem ;
+  color: #00426b;
+  font-size: 64px;
+  text-align: center;
+  font-style: normal;
+  /* font-weight: bold; */
+}
+.home-p {
+  /* padding: 6.875rem 5.313rem 6.875rem 5.313rem; */
+  background: #e4f5f9;
+  text-align: center;
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: 400;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+.home-p2 {
+  padding: 6.875rem 5.313rem 6.875rem 5.313rem;
+  color: #00426b;
+  text-align: center;
+}
+
+.h2 {
+  margin: 2rem;
+  padding: 2.875rem 5.313rem 4.875rem 5.313rem;
+}
+
+

@@ -3,6 +3,7 @@ import React, {useState } from 'react';
 import Logo from '../Logo/Logo';
 import globe from '../../Images/globe.png'
 import '../../App.css';
+import '../Nav/Nav.css'
 
 
 
