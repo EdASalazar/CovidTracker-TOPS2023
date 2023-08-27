@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Noto+Sans:wght@400;600&display=swap");
 
-
+/* 
 .App {
   text-align: center;
   height: 100%;
@@ -15,7 +15,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 
 /* Media query for smaller screens (mobile) */
@@ -23,9 +23,8 @@
 @media screen and (max-width: 800px) {
 
   .home-page {
-    height: 100vh;
+ 
     flex-direction: column-reverse;
-    padding: 1rem;
     margin-top: 7rem;
   }
 
@@ -34,8 +33,7 @@
   }
   .home-text p {
     text-align: center;
-    font-size: 0.85rem;
-    padding: 0.5rem;
+
   }
   .home-image {
     width: 100%;
@@ -62,16 +60,18 @@
     max-width: 60%;
     margin-right: 2rem;
   }
+  
+
 
 }
 
 /*home-landing-reporting*/
 .home-page {
   display: flex;
-  height: 40rem;
+  height: auto;
   align-items: center;
   justify-content: center;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   padding: 2rem;
 }
 /* style={{ height: '40rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }} */
@@ -123,7 +123,7 @@
 
 
 .home-p2 {
-  padding: 6.875rem 5.313rem 6.875rem 5.313rem;
+  /* padding: 6.875rem 5.313rem 6.875rem 5.313rem; */
   color: #00426b;
   text-align: center;
 }
