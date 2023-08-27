@@ -49,7 +49,7 @@ client
 app.use(express.json());
 
 // temp to run locally like production to check for errors
-app.use(express.static(path.join(__dirname, "frontend/build")));
+// app.use(express.static(path.join(__dirname, "frontend/build")));
 
 
 if (process.env.NODE_ENV === "production") {
