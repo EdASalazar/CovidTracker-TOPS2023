@@ -1,6 +1,7 @@
 const express = require("express");
 const { Client } = require("pg");
 const path = require("path")
+const PORT = process.env.PORT || 5423
 
 // console.log(process.env);
 
@@ -48,10 +49,10 @@ client
 app.use(express.json());
 
 // temp to run locally like production to check for errors
-app.use(express.static(path.join(__dirname, "frontend/build")));
+// app.use(express.static(path.join(__dirname, "frontend/build")));
 
 
-if (process.env.NODE_ENV == "production") {
+if (process.env.NODE_ENV === "production") {
   // serve static content
   //npm run build
   app.use(express.static(path.join(__dirname, "frontend/build")));
@@ -202,6 +203,6 @@ app.get("*", (req, res) => {
 
 
 // Start the server, listening on the specified port.
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
