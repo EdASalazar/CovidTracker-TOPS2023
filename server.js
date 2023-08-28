@@ -65,16 +65,16 @@ if (process.env.NODE_ENV === "production") {
 
 // GET route to retrieve all the partners
 // app.get("/partners", async (req, res) => {
-  try {
-    // Retrieve the partners from the database
-    const query = "SELECT * FROM partners";
-    const result = await client.query(query);
-    const partners = result.rows;
-    res.json(partners);
-  } catch (err) {
-    console.error("Error retrieving partners!", err);
-    res.status(500).json({ message: "Error retrieving partners!" });
-  }
+  // try {
+  //   // Retrieve the partners from the database
+  //   const query = "SELECT * FROM partners";
+  //   const result = await client.query(query);
+  //   const partners = result.rows;
+  //   res.json(partners);
+  // } catch (err) {
+  //   console.error("Error retrieving partners!", err);
+  //   res.status(500).json({ message: "Error retrieving partners!" });
+  // }
 // });
 
 // POST route to create a new partners
