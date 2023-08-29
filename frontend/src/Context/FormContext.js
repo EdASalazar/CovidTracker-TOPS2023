@@ -73,9 +73,6 @@ export const FormProvider = ({ children }) => {
     test_result: null,
     test_taken: null,
     test_date: null,
-    // I was getting an error so I switched this to null. 
-    // the error was happening because the data fetch for the graph uses this too
-    // so that input can't be null
     zipcode: "",
     symptoms: null,
     sex: null,
