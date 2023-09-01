@@ -23,6 +23,7 @@ require("dotenv").config();
 const port = process.env.USERPORT || 3030;
 
 // Create a new PostgreSQL client
+
 const client = new Client({
   user: process.env.RDSUSER,
   host: process.env.HOST,
@@ -32,14 +33,15 @@ const client = new Client({
 });
 
 // Connect to the PostgreSQL database
-client
-  .connect()
-  .then(() => {
-    console.log("Connected to the database");
-  })
-  .catch((err) => {
-    console.error("Error connecting to the database", err);
-  });
+
+// client
+//   .connect()
+//   .then(() => {
+//     console.log("Connected to the database");
+//   })
+//   .catch((err) => {
+//     console.error("Error connecting to the database", err);
+//   });
 
 // ========================
 // Middleware
@@ -49,13 +51,13 @@ client
 app.use(express.json());
 
 // temp to run locally like production to check for errors
-// app.use(express.static(path.join(__dirname, "frontend/build")));
+app.use(express.static(path.join(__dirname, "frontend/build")));
 
 
 if (process.env.NODE_ENV === "production") {
   // serve static content
   //npm run build
-  app.use(express.static(path.join(__dirname, "frontend/build")));
+  // app.use(express.static(path.join(__dirname, "frontend/build")));
 }
 
 
@@ -64,18 +66,19 @@ if (process.env.NODE_ENV === "production") {
 // ========================
 
 // GET route to retrieve all the partners
-app.get("/partners", async (req, res) => {
-  try {
-    // Retrieve the partners from the database
-    const query = "SELECT * FROM partners";
-    const result = await client.query(query);
-    const partners = result.rows;
-    res.json(partners);
-  } catch (err) {
-    console.error("Error retrieving partners!", err);
-    res.status(500).json({ message: "Error retrieving partners!" });
-  }
-});
+
+// app.get("/partners", async (req, res) => {
+//   try {
+//     // Retrieve the partners from the database
+//     const query = "SELECT * FROM partners";
+//     const result = await client.query(query);
+//     const partners = result.rows;
+//     res.json(partners);
+//   } catch (err) {
+//     console.error("Error retrieving partners!", err);
+//     res.status(500).json({ message: "Error retrieving partners!" });
+//   }
+// });
 
 // POST route to create a new partners
 app.post("/partners", async (req, res) => {
@@ -128,18 +131,19 @@ app.post("/partners", async (req, res) => {
 });
 
 // GET route to retrieve all the users
-app.get("/users", async (req, res) => {
-  try {
-    // Retrieve the users from the database
-    const query = "SELECT * FROM users";
-    const result = await client.query(query);
-    const users = result.rows;
-    res.json(users);
-  } catch (err) {
-    console.error("Error retrieving users!", err);
-    res.status(500).json({ message: "Error retrieving users!" });
-  }
-});
+
+// app.get("/users", async (req, res) => {
+//   try {
+//     // Retrieve the users from the database
+//     const query = "SELECT * FROM users";
+//     const result = await client.query(query);
+//     const users = result.rows;
+//     res.json(users);
+//   } catch (err) {
+//     console.error("Error retrieving users!", err);
+//     res.status(500).json({ message: "Error retrieving users!" });
+//   }
+// });
 
 // POST route to create a new user
 app.post("/users", async (req, res) => {

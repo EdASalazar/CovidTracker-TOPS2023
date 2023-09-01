@@ -47,25 +47,25 @@ export const FormProvider = ({ children }) => {
   const handleReviewSubmit = (event) => {
     event.preventDefault();
 
-    const data = JSON.stringify(newSite);
+    // const data = JSON.stringify(newSite);
 
-    return fetch("/partners", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((newPartner) => {
-        console.log("New partner created: ", newPartner);
-        setNewSite(initialPartnerState);
-        return true;
-      })
-      .catch((err) => {
-        console.error("Error creating new partner: ", err);
-        throw err;
-      });
+    // return fetch("/partners", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: data,
+    // })
+    //   .then((res) => res.json())
+    //   .then((newPartner) => {
+    //     console.log("New partner created: ", newPartner);
+    //     setNewSite(initialPartnerState);
+    //     return true;
+    //   })
+    //   .catch((err) => {
+    //     console.error("Error creating new partner: ", err);
+    //     throw err;
+    //   });
   };
 
   //Users
@@ -99,22 +99,22 @@ export const FormProvider = ({ children }) => {
   const handleUserSubmit = (event) => {
     event.preventDefault();
 
-    const data = JSON.stringify(newUser);
+    // const data = JSON.stringify(newUser);
 
-    fetch("/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((newUser) => {
-        console.log("New user created: ", newUser);
-      })
-      .catch((err) => {
-        console.error("Error creating new user: ", err);
-      });
+    // fetch("/users", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: data,
+    // })
+    //   .then((res) => res.json())
+    //   .then((newUser) => {
+    //     console.log("New user created: ", newUser);
+    //   })
+    //   .catch((err) => {
+    //     console.error("Error creating new user: ", err);
+    //   });
   };
 
   return (
