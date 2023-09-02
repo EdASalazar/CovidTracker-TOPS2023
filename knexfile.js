@@ -50,6 +50,9 @@ module.exports = {
       user: process.env.RDSUSER,
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
+      ssl: {
+        ca: fs.readFileSync('path/to/your/ca-certificate.pem'), // Provide the path to your CA certificate
+      },
     },
     pool: {
       min: 2,
