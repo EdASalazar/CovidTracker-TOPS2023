@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 // Update with your config settings.
 
 /**
@@ -43,7 +44,7 @@ module.exports = {
   },
 
   production: {
-    client: "postgresql",
+    client: "pg",
     connection: {
       host: process.env.HOST,
       port: process.env.PORT,
@@ -51,7 +52,7 @@ module.exports = {
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
       ssl: {
-        ca: fs.readFileSync('path/to/your/ca-certificate.pem'), // Provide the path to your CA certificate
+        ca: fs.readFileSync('../CovidTracker-TOPS2023/RDSCertificate/RDSCertificate/us-east-1-bundle.pem'), // Provide the path to your CA certificate
       },
     },
     pool: {
