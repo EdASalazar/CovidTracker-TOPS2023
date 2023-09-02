@@ -52,7 +52,7 @@ module.exports = {
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
       ssl: {
-        ca: fs.readFileSync('../CovidTracker-TOPS2023/RDSCertificate/RDSCertificate/us-east-1-bundle.pem'), // Provide the path to your CA certificate
+        ca: fs.readFileSync("../CovidTracker-TOPS2023/config/config/rds-combined-ca-bundle.pem"), // Provide the path to your CA certificate
       },
     },
     pool: {
