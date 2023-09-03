@@ -9,7 +9,7 @@
   },
   "scripts": {
     "script": "knex migrate:latest",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
@@ -27,6 +27,7 @@
     "nodemon": "^3.0.1"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "dotenv": "^16.3.1"
   }
 }

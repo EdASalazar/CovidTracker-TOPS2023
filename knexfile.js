@@ -1,5 +1,4 @@
 require("dotenv").config();
-
 // Update with your config settings.
 
 /**
@@ -10,7 +9,7 @@ module.exports = {
     client: "postgresql",
     connection: {
       host: process.env.HOST,
-      port: process.env.DBPORT,
+      port: process.env.PORT,
       user: process.env.RDSUSER,
       password: process.env.PASSWORD,
       database: process.env.DATABASE,
@@ -44,16 +43,11 @@ module.exports = {
   },
 
   production: {
-    client: "pg",
+    client: "postgresql",
     connection: {
-      host: process.env.HOST,
-      port: process.env.PORT,
-      user: process.env.RDSUSER,
-      password: process.env.PASSWORD,
       database: process.env.DATABASE,
-      ssl: {
-        ca: fs.readFileSync("../CovidTracker-TOPS2023/config/config/rds-combined-ca-bundle.pem"), // Provide the path to your CA certificate
-      },
+      user: process.env.USER,
+      password: process.env.PASSWORD,
     },
     pool: {
       min: 2,
